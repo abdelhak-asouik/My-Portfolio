@@ -11,6 +11,23 @@
         height :3px;
         margin : 0 0 5px 0;
         @include easeout;
-
+    }
+    //Rotate into X with menu lines
+    &.close {
+        transform: rotate(180deg);
+       .btn-line {
+            // line 1 rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px,5px);
+            }
+            //line2  hide
+            &:nth-child(2){
+                opacity: 0;
+            }
+            //line 3 rotate
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(7px,-6px);
+            }
+       }
     }
 }
